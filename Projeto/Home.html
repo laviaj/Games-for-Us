@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+        <title> Game for Us </title>
+        <script src=script.js></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <style>
+            body {
+                font-family: "Lato", sans-serif;
+                }
+
+            .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            }
+
+            .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+            color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            }
+
+            @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!--Logo Games for Us-->
+        <header>
+        <a href="home.html"><img id="logo" src="Imagens/logo2.png" alt="GameofUs"></a>
+        <!-- Menu superior com BUSCA E LUPA-->
+        <nav id="menuSuperior">
+            <ul>
+                <li><form class="pesquisa">
+                    <input type = "search" id = "barra">
+                    <img id="lupa" src="Imagens/lupa.png" class="btn">
+                    </form> </li>
+            </ul>
+        </nav>
+        </header>
+        
+        <br>
+        <!--IMAGENS DO MEIO DO MENU-->
+        <section>
+            <img id="img" src="Imagens/jogos.jpg" alt="Jogos">
+        </section>
+        
+        <br>
+        <!--MENU PRINCIPAL COM TOPICOS E O CARRINHO-->
+        <nav id="menuPrincipal">
+            <ul>
+                <li><a href="categorias.html"> Categorias </a></li>
+                <li><a href="ajuda.html"> Ajuda </a></li>
+                <li><a href="venda.html"> Venda </a></li>
+                <li><a href="cadastro.html"> Cadastro </a></li>
+                <li><a href="login.html"> Login </a></li>
+                <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>>
+                </div>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <img id = "carrinho"src="Imagens/cart.png" alt="Carrinho" > </span>
+                
+                <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+            </ul>
+        </nav>
+        <!--CAMPO DE NOVIDADES-->
+        <article>
+            <form name="form1" method="post">
+            <fieldset id="campo2">
+                <legend id="legend"> Novidades </legend>
+                <article>
+                    <p id="pArticle3">Batman - Arkham City PS3 <img id="jogo" src="Imagens/jogo1.jpg" alt="Batman"> </p>
+                </article>
+            </fieldset>
+            <!--CAMPO DE PLATAFORMAS--> 
+            <fieldset id="campo3">
+                <legend id="legend2"> Plataformas </legend> 
+            </fieldset>
+        </form>
+        </article>
+        
+
+        <br>
+        <!--SETA PARA CIMA-->   
+        <footer><a href="#" id="subir"><img id="topo" src="Imagens/arrowTop.png" alt="Topo"></a></footer>
+            
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $('#subir').click(function(){ 
+            $('html, body').animate({scrollTop:0}, 'slow');
+                return false;
+            });
+            });
+        </script>
+        
+    <br>
+    <!--RODAPÉ--> 
+    <hr id="linhaFoot">
+    
+        <p id="pFoot"> Todos os direitos reservados © </p>
+        
+    </body>
+    
+</html>
